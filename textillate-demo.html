@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Textillate Demo</title>
+    <!-- Plugin animations and styles -->
+    <link rel="stylesheet" href="assets/animate.css">
+    <!-- Plugin style
+    <link rel="stylesheet" href="assets/style.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+      h1 {
+        font-size: 10vh;
+        text-align: center;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 class="tlt">Lay plans for something big by starting with it when small</h1>
+
+    <!-- jquery plugins -->
+    <script src="assets/jquery.fittext.js"></script>
+    <script src="assets/jquery.lettering.js"></script>
+    <script src="jquery.textillate.js"></script>
+
+    <script>
+    // setting effects
+    $(function () {
+    	$('.tlt').textillate({
+        in: {
+        	// set the effect name
+          effect: 'fadeIn',
+
+          // set the delay factor applied to each consecutive character
+          delayScale: 1.5,
+
+          // set the delay between each character
+          delay: 50,
+
+          // set to true to animate all the characters at the same time
+          sync: true,
+
+          // randomize the character sequence
+          // (note that shuffle doesn't make sense with sync = true)
+          shuffle: false,
+
+          // reverse the character sequence
+          // (note that reverse doesn't make sense with sync = true)
+          reverse: false,
+
+          // callback that executes once the animation has finished
+          callback: function () {
+            alert('it is working')
+          }
+        }
+      });
+    });
+
+
+    </script>
+
+  </body>
+</html>
